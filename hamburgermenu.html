@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hamburger menu</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+
+	}
+	body{
+		background-color: deepskyblue;
+	}
+	main{
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.wrap{
+		cursor: pointer;
+	}
+	.bar-top{
+	width:50px;
+	height: 5px;
+	background-color: #fff;
+	margin:10px 0;
+	border-radius: 1px; 
+	}
+	.bar-middle{
+	width:50px;
+	height: 5px;
+	background-color: #fff;
+	margin:10px 0;
+	border-radius: 1px; 
+	}
+	.bar-bottom{
+	width:50px;
+	height: 5px;
+	background-color: #fff;
+	margin:10px 0;
+	border-radius: 1px; 
+	}
+	.change .bar-top{
+		transform: translateY(15px) rotateZ(45deg);
+		background-color: black;
+	}
+	.change .bar-bottom{
+		transform: translateY(-15px) rotateZ(-45deg);
+		background-color: black;
+	}
+	.change .bar-middle{
+		box-shadow: 0 0 0 30px #fff;
+	}
+</style>
+<body>
+	<main>
+		<div class="wrap"onclick="myfunc(this)">
+			<div class="bar-top"></div>
+			<div class="bar-middle"></div>
+			<div class="bar-bottom"></div>
+		</div>
+	</main>
+<script type="text/javascript">
+	function myfunc(x) {
+		x.classList.toggle('change')
+	}
+</script>
+</body>
+</html>
